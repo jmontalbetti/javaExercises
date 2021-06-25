@@ -16,38 +16,38 @@ public class Exercises {
 
     public static void Exercise1() {
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Ingresar cantidad de numeros pares");
+        System.out.println("Ingresar cantidad de números pares");
         int oddQuantity = scanner.nextInt();
-        for (int i = 0; i < oddQuantity; i++){
-            System.out.println(i*2);
+        for (int i = 0; i < oddQuantity; i++) {
+            System.out.println(i * 2);
         }
     }
 
     public static void Exercise2() {
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Ingresar number");
+        System.out.println("Ingresar número");
         int number = scanner.nextInt();
-        System.out.println("Ingresar cantidad de multiplos");
+        System.out.println("Ingresar cantidad de múltiplos");
         int multiplesQuantity = scanner.nextInt();
-        for(int i = 1; i<= multiplesQuantity; i++){
-            System.out.println(i*number);
+        for (int i = 1; i <= multiplesQuantity; i++) {
+            System.out.println(i * number);
         }
     }
 
     public static void Exercise3() {
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Ingresar numero");
+        System.out.println("Ingresar número");
         int number = scanner.nextInt();
-        if(IsPrimeNumber(number))
-            System.out.println("El numero: " + number + " es primo");
+        if (IsPrimeNumber(number))
+            System.out.println("El número: " + number + " es primo");
         else
-            System.out.println("El numero: " + number + " no es primo");
+            System.out.println("El número: " + number + " no es primo");
     }
 
     private static boolean IsPrimeNumber(int number) {
         boolean flag = true;
-        for (int i = 2; i <= number / 2; ++i){
-            if (number % i == 0){
+        for (int i = 2; i <= number / 2; ++i) {
+            if (number % i == 0) {
                 flag = false;
                 break;
             }
@@ -76,11 +76,11 @@ public class Exercises {
         int numberCounter = scanner.nextInt();
         System.out.println("Ingresar cantidad de repeticiones");
         int repetitionQuantity = scanner.nextInt();
-        System.out.println("Ingresar el digito repetido");
+        System.out.println("Ingresar el dígito repetido");
         int repeatedDigit = scanner.nextInt();
         int counter = 0;
         int number = 0;
-        while(counter < numberCounter) {
+        while (counter < numberCounter) {
             number++;
             if (ContainsRepetitionQuantity(number, repetitionQuantity, repeatedDigit)) {
                 System.out.println(number);
@@ -90,7 +90,7 @@ public class Exercises {
     }
 
     private static boolean ContainsRepetitionQuantity(int number, int repetitionQuantity, int repeatedDigit) {
-        int count = String.valueOf(number).length() - String.valueOf(number).replaceAll(String.valueOf(repeatedDigit),"").length();
+        int count = String.valueOf(number).length() - String.valueOf(number).replaceAll(String.valueOf(repeatedDigit), "").length();
         return count == repetitionQuantity;
     }
 
@@ -99,9 +99,9 @@ public class Exercises {
         int number2 = 5;
         System.out.println("La suma es " + number1 + number2);
         System.out.println("La resta es " + (number1 - number2));
-        System.out.println("La multiplicacion es " + (number1 * number2));
+        System.out.println("La multiplicación es " + (number1 * number2));
         if (number2 != 0)
-            System.out.println("La division es " + (number1 / number2));
+            System.out.println("La división es " + (number1 / number2));
         else
             System.out.println("No se puede dividir por 0");
     }
@@ -113,14 +113,14 @@ public class Exercises {
 
     public static void Exercise3B() {
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Ingresar el radio");
+        System.out.println("Ingresar radio");
         String stringRadius = scanner.next();
-        System.out.println("El area del circulo es " + Math.PI * Math.pow(Double.parseDouble(stringRadius), 2));
+        System.out.println("El área del círculo es " + Math.PI * Math.pow(Double.parseDouble(stringRadius), 2));
     }
 
     public static void Exercise4B() {
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Ingresar el numero");
+        System.out.println("Ingresar número");
         int number = scanner.nextInt();
         boolean isOdd = number % 2 == 0;
         if (isOdd)
